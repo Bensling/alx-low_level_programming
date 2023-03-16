@@ -1,12 +1,2 @@
-#include <stdio.h>
-/**
-* main - Entry point
-*
-* Return: Always 0 (Success)
-*/
-int main(void)
-{
-	printf("intel_syntax noprefix");
-	Return (0);
-}
-
+#!/bin/bash
+gcc -c $CFILE 
