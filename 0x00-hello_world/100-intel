@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o (Intel syntax) 
+gcc -S -masm=intel $cfile.c
