@@ -14,5 +14,5 @@
 	    	printf("Size of a double: %lu byte(s)\n", sizeof(double));
     		printf("Size of a long double: %lu byte(s)\n", sizeof(long double));
     		printf("Size of a void pointer: %lu byte(s)\n", sizeof(void *));
-		Return 0;
+		Return (0);
 }
