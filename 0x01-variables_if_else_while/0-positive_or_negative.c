@@ -5,7 +5,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int n;= 2, 5, 6
+	int n;= 4,5,6
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
