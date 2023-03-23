@@ -15,6 +15,7 @@ int _isdigit(int c)
 		return (1);
 	}
 	else
+		(c = 'a' && c <= 'z');
 	{
 		return (0);
 	}
