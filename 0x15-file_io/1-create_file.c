@@ -11,30 +11,30 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int rder;
-	int txt;
-	int rtx;
+	int fd;
+	int nletters;
+	int rwr;
 
 	if (!filename)
 		return (-1);
 
-	rder = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	if (rder == -1)
+	if (fd == -1)
 		return (-1);
 
 	if (!text_content)
 		text_content = "";
 
-	for (txt = 0; text_content[txt]; txt++)
+	for (nletters = 0; text_content[nletters]; nletters++)
 		;
 
-	rxt = write(rder, text_content, txt);
+	rwr = write(fd, text_content, nletters);
 
-	if (rxt == -1)
+	if (rwr == -1)
 		return (-1);
 
-	close(rder);
+	close(fd);
 
 	return (1);
 }
