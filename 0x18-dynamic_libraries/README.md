@@ -30,7 +30,7 @@ Don’t forget to push your main.h file in your repository, containing at least 
 
 julien@ubuntu:~/0x18. Dynamic libraries$ ls -la lib*
 -rwxrwxr-x 1 julien julien 13632 Jan  7 06:25 libdynamic.so
-julien@ubuntu:~/0x18. Dynamic libraries$ nm -D libdynamic.so 
+julien@ubuntu:~/0x18. Dynamic libraries$ nm -D libdynamic.so
 0000000000000a90 T _abs
 0000000000000aa9 T _atoi
 0000000000202048 B __bss_start
@@ -77,7 +77,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 julien@ubuntu:~/0x18. Dynamic libraries$ gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -ldynamic -o len
-julien@ubuntu:~/0x18. Dynamic libraries$ ldd len 
+julien@ubuntu:~/0x18. Dynamic libraries$ ldd len
     linux-vdso.so.1 =>  (0x00007fff5d1d2000)
     libdynamic.so => not found
     libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f74c6bb9000)
@@ -88,9 +88,9 @@ julien@ubuntu:~/0x18. Dynamic libraries$ ldd len
     libdynamic.so => ./libdynamic.so (0x00007fd4bf2d9000)
     libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fd4beef6000)
     /lib64/ld-linux-x86-64.so.2 (0x0000557566402000)
-julien@ubuntu:~/0x18. Dynamic libraries$ ./len 
+julien@ubuntu:~/0x18. Dynamic libraries$ ./len
 10
-julien@ubuntu:~/0x18. Dynamic libraries$ 
+julien@ubuntu:~/0x18. Dynamic libraries$
 
 Repo:
 
@@ -106,8 +106,8 @@ Create a script that creates a dynamic library called liball.so from all the .c 
 julien@ubuntu:~/0x18. Dynamic libraries$ ls *.c
 abs.c   isalpha.c  islower.c  memcpy.c  putchar.c  strcat.c  strcmp.c  strlen.c   strncpy.c  strspn.c
 atoi.c  isdigit.c  isupper.c  memset.c  puts.c     strchr.c  strcpy.c  strncat.c  strpbrk.c  strstr.c
-julien@ubuntu:~/0x18. Dynamic libraries$ ./1-create_dynamic_lib.sh 
-julien@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only liball.so 
+julien@ubuntu:~/0x18. Dynamic libraries$ ./1-create_dynamic_lib.sh
+julien@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only liball.so
 0000000000000a90 T _abs
 0000000000000aa9 T _atoi
 0000000000202048 B __bss_start
@@ -133,7 +133,7 @@ julien@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only liball.so
 0000000000001029 T _strpbrk
 000000000000109d T _strspn
 0000000000001176 T _strstr
-julien@ubuntu:~/0x18. Dynamic libraries$ 
+julien@ubuntu:~/0x18. Dynamic libraries$
 
 Repo:
 
@@ -160,31 +160,31 @@ print("{} - {} = {}".format(a, b, cops.sub(a, b)))
 print("{} x {} = {}".format(a, b, cops.mul(a, b)))
 print("{} / {} = {}".format(a, b, cops.div(a, b)))
 print("{} % {} = {}".format(a, b, cops.mod(a, b)))
-julien@ubuntu:~/0x16. Doubly linked lists$ python3 100-tests.py 
+julien@ubuntu:~/0x16. Doubly linked lists$ python3 100-tests.py
 66 + -76 = -10
 66 - -76 = 142
 66 x -76 = -5016
 66 / -76 = 0
 66 % -76 = 66
-julien@ubuntu:~/0x18$ python3 100-tests.py 
+julien@ubuntu:~/0x18$ python3 100-tests.py
 -34 + -57 = -91
 -34 - -57 = 23
 -34 x -57 = 1938
 -34 / -57 = 0
 -34 % -57 = -34
-julien@ubuntu:~/0x18$ python3 100-tests.py 
+julien@ubuntu:~/0x18$ python3 100-tests.py
 -5 + -72 = -77
 -5 - -72 = 67
 -5 x -72 = 360
 -5 / -72 = 0
 -5 % -72 = -5
-julien@ubuntu:~/0x18$ python3 100-tests.py 
+julien@ubuntu:~/0x18$ python3 100-tests.py
 39 + -62 = -23
 39 - -62 = 101
 39 x -62 = -2418
 39 / -62 = 0
 39 % -62 = 39
-julien@ubuntu:~/0x18$ 
+julien@ubuntu:~/0x18$
 
 Repo:
 
@@ -199,13 +199,13 @@ I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 7
 
     Our mole got us a copy of the program, you can download it here. Our mole also gave us a piece of documentation:
 
-/* Giga Millions program                                                                                    
-  * Players may pick six numbers from two separate pools of numbers:                                                
-  * - five different numbers from 1 to 75 and                                                                       
-  * - one number from 1 to 15                                                                                       
-  * You win the jackpot by matching all six winning numbers in a drawing.                                           
-  * Your chances to win the jackpot is 1 in 258,890,850                                                             
-  *                                                                                                                 
+/* Giga Millions program
+  * Players may pick six numbers from two separate pools of numbers:
+  * - five different numbers from 1 to 75 and
+  * - one number from 1 to 15
+  * You win the jackpot by matching all six winning numbers in a drawing.
+  * Your chances to win the jackpot is 1 in 258,890,850
+  *
   * usage: ./gm n1 n2 n3 n4 n5 bonus
 
     You can’t modify the program gm itself as Master Sysadmin Sylvain (MSS) always checks its MD5 before running it
